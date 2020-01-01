@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adventure Communist Capsule Tracker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Capsule Tracker">
+    <link rel="apple-touch-icon" href="img/icons/icon-152x152.png">
+    <meta name="theme-color" content="#8b8d8f" />
+    <meta name="description" content="Capsule Tracker For Adventure Communist">
+    <style>
+        img,
+        strong {
+            margin-right: 0.2em;
+        }
+
+        .card {
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#">
+                Adventure Communist Capsule Tracker
+            </a>
+
+            <a role="button" class="navbar-burger" onclick="toggleNavbar(this)" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-end navbar-menu" id="navbar">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a href="./" class="button is-primary">
+                        <strong>Main</strong>
+                    </a>
+                    <a href="./event.html" class="button is-light">
+                        Event
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="section">
+        <div class="container">
+            <div class="card">
+                <header class="card-header card-header-title">
+                    Chest History
+                </header>
+                <div class="card-content" id="chestHistory">
+                </div>
+                <footer class="card-footer">
+                    <a href="#" class="card-footer-item" onclick="addChest(0)">
+                        <img alt="Wood Capsule" src="img/0.png" class="image" />
+                    </a>
+                    <a href="#" class="card-footer-item" onclick="addChest(1)">
+                        <img alt="Stone Capsule" src="img/1.png" class="image" />
+                    </a>
+                    <a href="#" class="card-footer-item" onclick="addChest(2)">
+                        <img alt="Iron Capsule" src="img/2.png" class="image" />
+                    </a>
+                    <a href="#" class="card-footer-item" onclick="addChest(3)">
+                        <img alt="Epic Capsule" src="img/3.png" class="image" />
+                    </a>
+                    <a href="#" class="card-footer-item" onclick="addChest(4)">
+                        <img alt="Supreme Capsule" src="img/4.png" class="image" />
+                    </a>
+                    <a href="#" class="card-footer-item" onclick="addChest('.')">
+                        <img alt="Supreme Capsule" src="img/q.png" class="image" />
+                    </a>
+                </footer>
+            </div>
+            <div class="card table-container">
+                <table class="table is-fullwidth">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th><img alt="Wood Capsule" src="img/0.png" class="image" /></th>
+                            <th><img alt="Stone Capsule" src="img/1.png" class="image" /></th>
+                            <th><img alt="Iron Capsule" src="img/2.png" class="image" /></th>
+                            <th><img alt="Epic Capsule" src="img/3.png" class="image" /></th>
+                            <th><img alt="Supreme Capsule" src="img/4.png" class="image" /></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Possibility</td>
+                            <td id="wood">0</td>
+                            <td id="stone">0</td>
+                            <td id="iron">0</td>
+                            <td id="epic">0</td>
+                            <td id="supreme">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <header class="card-header card-header-title">
+                    Chest Cycle
+                </header>
+                <div class="card-content" id="chestCycle"></div>
+            </div>
+        </div>
+    </div>
+    <script>const chestCycle = "100002000010001000010000100001000010000100000100001000010000001000100020001000100010001000100010001001000010000100010004000100020000100000100010001000010000100010001000010000100100010001000002000100001000010000100000010000100001000010000300";</script>
+    <script src="app.js"></script>
+</body>
+
+</html>
