@@ -1,7 +1,8 @@
 const cacheName = "cache-v1";
 const staticAssets = [
     "./",
-    "./img/..png",
+    "./event.html",
+    "./img/q.png",
     "./img/0.png",
     "./img/1.png",
     "./img/2.png",
